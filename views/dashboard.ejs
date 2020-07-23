@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Logger</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1 class="mt-4">Dashboard</h1>
+    <p class="lead mb-3">Welcome <%= user.name %></p>
+    <a href="/users/logout" class="btn btn-secondary">Logout</a>
+    <h2>Press the arrows key to log</h2>
+    <ul>
+      <h4>
+        <i
+          class="fas fa-arrow-alt-circle-up"
+          style="font-size: 26px; color: red;"
+        ></i>
+        UP Key
+      </h4>
+      <li>Start Time: <span id="upstart"></span></li>
+      <li>End Time: <span id="upend"></span></li>
+      <li>Total Time: <span id="uptotal"></span></li>
+    </ul>
+    <ul>
+      <h4>
+        <i
+          class="fas fa-arrow-alt-circle-down"
+          style="font-size: 26px; color: red;"
+        ></i
+        >Down Key
+      </h4>
+      <li>Start Time: <span id="downstart"></span></li>
+      <li>End Time: <span id="downend"></span></li>
+      <li>Total Time: <span id="downtotal"></span></li>
+    </ul>
+    <ul>
+      <h4>
+        <i
+          class="fas fa-arrow-alt-circle-left"
+          style="font-size: 26px; color: red;"
+        ></i
+        >Left Key
+      </h4>
+      <li>Start time: <span id="leftstart"></span></li>
+      <li>End Time: <span id="leftend"></span></li>
+      <li>Total Time: <span id="lefttotal"></span></li>
+    </ul>
+    <ul>
+      <h4>
+        <i
+          class="fas fa-arrow-alt-circle-right"
+          style="font-size: 26px; color: red;"
+        ></i
+        >Right Key
+      </h4>
+      <li>Start Time: <span id="rightstart"></span></li>
+      <li>End Time: <span id="rightend"></span></li>
+      <li>Total Time: <span id="righttotal"></span></li>
+    </ul>
+  </body>
+  <script src="/scripts/socketConn.js"></script>
+</html>
